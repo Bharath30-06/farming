@@ -1,0 +1,90 @@
+<!-- views/farms.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farming Management - Farms</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://images.pexels.com/photos/461982/pexels-photo-461982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); /* Light green to dark green */
+            background-size: cover;
+            
+            color: #000;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #ffffffb6;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-weight: bold; 
+        }
+
+        li strong {
+            font-size: 18px;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #369705;
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 4px;
+            
+        }
+
+        a:hover {
+            background: #439d07;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Farm Details</h1>
+    <% if (farms && farms.length > 0) { %>
+        <ul>
+            <% farms.forEach(farm => { %>
+                <li>
+                    <strong>Farm Name:</strong> <%= farm.farmName %><br>
+                    <!-- Display other farm details based on your requirements -->
+                    <strong>Location:</strong> <%= farm.location %><br>
+                    <strong>Farm Size:</strong> <%= farm.farmSize %><br>
+                    <strong>Soil Type:</strong> <%= farm.soilType %><br>
+                    <strong>Irrigation System:</strong> <%= farm.irrigationSystem %><br>
+                    <strong>Crop Rotation Plan:</strong> <%= farm.cropRotationPlan %><br>
+                    <strong>Farmer Name:</strong> <%= farm.farmerName %><br>
+                    <strong>Phone Number:</strong> <%= farm.phoneNumber %><br>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No farms available.</p>
+    <% } %>
+    <br>
+    <a href="/">Add New Farm</a>
+</body>
+
+</html>
