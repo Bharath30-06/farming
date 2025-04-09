@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: farm_service
+  name: farm-service
 spec:
   selector:
     app: web_app
