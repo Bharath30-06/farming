@@ -8,5 +8,5 @@ spec:
   type: "LoadBalancer" 
   ports:
     - port: 3000
-      targetPort: 30578
+      targetPort: 3000
 
