@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: config_web
+  name: configweb
 data:
    MONGO_URL: mongodb://mongo:27017/farming_management
   
