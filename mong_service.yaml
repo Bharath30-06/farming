@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo_service
+spec:
+  selector:
+    app: mongo_web
+  ports:
+    - port: 27017
+      targetPort: 30578

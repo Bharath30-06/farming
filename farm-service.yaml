@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: farm_service
+spec:
+  selector:
+    app: web_app
+  type: "LoadBalancer" 
+  ports:
+    - port: 27017
+      targetPort: 30578
+
